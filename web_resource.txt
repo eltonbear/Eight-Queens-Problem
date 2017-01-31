@@ -1,0 +1,2 @@
+http://www.mathcs.emory.edu/~cheung/Courses/170.2010/Syllabus/Backtracking/8queens.html
+https://www.cs.usfca.edu/~galles/visualization/RecQueens.html
