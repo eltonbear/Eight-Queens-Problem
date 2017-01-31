@@ -1,7 +1,9 @@
 function boo = noAttack(r, c, board)
+% Elton Shon  E177  Spring 2017
 % The function noAttack checks if the position already has a queen or if
-% the postiton results any attack. It returns a boolean and True if the
-% position can be placed a queen
+% placing a queen at the position results any attack. The fuction takes the
+% row and column of the position and the chess board. It returns a boolean 
+% and it is true if a queen can be placed.
 
 % check columns and rows
 boo = true;

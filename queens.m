@@ -3,16 +3,18 @@ function matrix = queens
 %
 % The function "queens" places n queens on a chessboard such that no queens 
 % can attack each other. It solves the problem using backtracking algorithm
-% and returns an 8x8xN matrix, where N is the number of solutions found.
+% and returns an 8x8xN matrix, where N is the number of solutions found. It
+% does not take any input arguements. 
 %
 % Implementation:
 %
 %   1) queens first declares a nxn array of 1s and an empty output array.
 %   2) A nest function "putQueen" is called starting at row = 1.
 %   3) putQueen(row) attempts to place queens on the indicated rows and
-%      if there is already a queen at the position or the position results
-%      attacking, it trys to place the queen at the next available position
-%      on the same row by traversing through columns 1 to n. 
+%      if there is already a queen at the position or placing a queen at 
+%      the position results any attacks, it trys to place the queen at the 
+%      next available position on the same row by traversing through 
+%      columns 1 to n. 
 %   4) Once a queen is placed, if the row number is less than n, it 
 %      continues to place the next queen at the next row by recursively 
 %      calling putQueen(row + 1). If the row number is equal to n, it has
@@ -21,8 +23,8 @@ function matrix = queens
 %   5) Backtracking is then used by removing the queen that is just placed
 %      to find the next possible solution.
 %
-% The result is an 8x8x92 matrix. There are 92 distinct solutions, though
-% many of these solutions only differ by symmetrical operations.
+% The result is an 8x8x92 matrix. There are 92 solutions, but
+% many of the solutions only differ by symmetrical operations.
 
 % Initialize the output array
 matrix = [];
@@ -54,7 +56,9 @@ board = ones(n);
             end      
         end
     end
+
 % place queens starting from row 1
 putQueen(1);
+
 end
         
